@@ -58,7 +58,7 @@ my_list.sort()
 # Numpy Arrays
 import numpy as np
 
-py_list = [1, 2, 3, 4]
+py_list = [1, 2, 3, 4, 5]
 np_array = np.array(py_list)
 np_2darray = np.array([[1,2,3],[4,5,6]])
 
@@ -70,3 +70,10 @@ np_array > 2
 np_array*2
 np_array + np.array([2,2,2,2])
 
+np_array.shape
+np.append(np_array,5)
+np.insert(np_array,1,100)
+np.delete(np_array,1)
+np.mean(np_array)
+np.median(np_array)
+np.std(np_array)
