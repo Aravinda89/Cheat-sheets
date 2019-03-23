@@ -54,3 +54,19 @@ my_list.extend('!!')
 my_list.pop(0)
 my_list.insert(2,'!!!')
 my_list.sort()
+
+# Numpy Arrays
+import numpy as np
+
+py_list = [1, 2, 3, 4]
+np_array = np.array(py_list)
+np_2darray = np.array([[1,2,3],[4,5,6]])
+
+np_array[2]
+np_array[0:2]
+np_2darray[:,:2]
+
+np_array > 2
+np_array*2
+np_array + np.array([2,2,2,2])
+
