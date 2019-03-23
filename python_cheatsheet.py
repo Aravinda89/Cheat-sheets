@@ -28,7 +28,7 @@ string1.count('i')
 string1.lower().count('i')
 string1.replace('y','Y')
 string1.strip()
-
+string1.split('s')
 
 # Lists
 a = 'three'
@@ -46,3 +46,13 @@ my_list[:3]
 my_list[1][1]
 my_list2[1][2]
 
+my_list.index('two')
+my_list2.count('one')
+my_list.append('!')
+my_list.remove('four')
+del my_list[2]
+my_list.reverse()
+my_list.extend('!!')
+my_list.pop(0)
+my_list.insert(2,'!!!')
+my_list.sort()
