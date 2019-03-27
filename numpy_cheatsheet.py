@@ -27,3 +27,24 @@ b.size
 b.dtype
 b.dtype.name
 b.astype(int)
+
+#Array Mathmatics
+a-b
+np.subtract(a,b)
+a+b
+np.add(a,b)
+a/b
+np.divide(a,b)
+a*b
+np.multiply(a,b)
+np.exp(b)
+np.sqrt(b)
+np.sin(b)
+np.cos(b)
+np.log(b)
+a.dot(b.T)
+
+#Comparison
+a == b
+a < 3
+np.array_equal(a, a.copy())
