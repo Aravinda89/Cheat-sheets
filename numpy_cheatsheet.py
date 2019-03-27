@@ -16,3 +16,14 @@ np.full((3,3),5)
 np.eye(3)
 np.random.random((5,5))
 np.empty((2,2))
+
+# Inspecting arrays
+a.shape
+len(a)
+b.ndim
+c.ndim
+c.size
+b.size
+b.dtype
+b.dtype.name
+b.astype(int)
