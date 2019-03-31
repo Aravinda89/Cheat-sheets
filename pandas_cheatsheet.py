@@ -12,5 +12,11 @@ df3 = pd.DataFrame({'0': [0.23, 0.18, 0.43], '1': [0.39, 0.23, 0.43]})
 df4 = df3.stack()
 df4.unstack()
 
+pd.melt(df, id_vars=['Date'], value_vars=["Type", "Value"], value_name="Obsevations")
+
+# Iterations
+df.iteritems()
+df.iterrows()
+
 
 
