@@ -18,5 +18,17 @@ pd.melt(df, id_vars=['Date'], value_vars=["Type", "Value"], value_name="Obsevati
 df.iteritems()
 df.iterrows()
 
+#Indexing
+
+# Selecting
+df3 = pd.DataFrame({'A': [1, 2, 3, 4, 5], 'B': [6, 7, 8, 9, 10], 'C': [12, 5, 6, 9, 2]})
+df3.loc[:, (df3 < 7).any()] # any col
+df3.loc[:, (df3 > 3).all()] # ALL col
+
+df4 = df3[df3 > 8]
+df4.loc[:, df4.isnull().any()]
+df4.loc[:, df4.notnull().any()]
+
+
 
 
