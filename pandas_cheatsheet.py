@@ -39,10 +39,11 @@ df3.where(df3 >= 8)
 df3.query('C<B')
 
 # Setting Index
+df3.set_index('A')
 df3 = shuffle(df3)
 df3 = df3.reset_index()
 df3 = df3.rename(index=str, columns={"A": "ONE", "B": "TWO","C": "THREE"})
-
+df3.reindex(['a', 'b', 'c', 'd', 'e'])
 
 
 
