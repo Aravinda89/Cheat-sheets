@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.utils import shuffle
 
 df = pd.DataFrame({'Date': ['2016-03-01', '2016-03-02', '2016-03-03'],
                    'Type': ['a', 'b', 'c'], 'Value': [11.432, 13.031, 20.234]})
@@ -36,6 +37,12 @@ df3['A'][df3['A'].isin([1, 2, 3])]
 df3.filter(items=["A", "B"])
 df3.where(df3 >= 8)
 df3.query('C<B')
+
+# Setting Index
+df3 = shuffle(df3)
+df3 = df3.reset_index()
+df3 = df3.rename(index=str, columns={"A": "ONE", "B": "TWO","C": "THREE"})
+
 
 
 
