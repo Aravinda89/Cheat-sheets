@@ -43,11 +43,14 @@ df3.set_index('A')
 df3 = shuffle(df3)
 df3 = df3.reset_index()
 df3 = df3.rename(index=str, columns={"A": "ONE", "B": "TWO","C": "THREE"})
+
+# Reindexing
 df3.reindex(['a', 'b', 'c', 'd', 'e'])
-
-
-
-
+df5 = pd.DataFrame({'Country': ['China', 'Germany'],
+                    'Capital': ['Berlin', 'Beijing'],
+                    'Population': [3000000, 1500500]})
+df5.reindex(range(5), method='ffill')
+df5.reindex(range(5), method='bfill')
 
 
 
