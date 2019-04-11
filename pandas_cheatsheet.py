@@ -52,5 +52,11 @@ df5 = pd.DataFrame({'Country': ['China', 'Germany'],
 df5.reindex(range(5), method='ffill')
 df5.reindex(range(5), method='bfill')
 
+# Duplicate data
+df6 = pd.DataFrame({'A':[1,2,1,3,4,4]})
+df6['A'].unique()
+df6['A'].duplicated()
+df6['A'].drop_duplicates()
+df6.index.duplicated() # Check index duplicated
 
 
