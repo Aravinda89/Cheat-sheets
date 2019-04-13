@@ -53,10 +53,15 @@ df5.reindex(range(5), method='ffill')
 df5.reindex(range(5), method='bfill')
 
 # Duplicate data
-df6 = pd.DataFrame({'A':[1,2,1,3,4,4]})
+df6 = pd.DataFrame({'A': [1, 2, 1, 3, 4, 4]})
 df6['A'].unique()
 df6['A'].duplicated()
 df6['A'].drop_duplicates()
-df6.index.duplicated() # Check index duplicated
+df6.index.duplicated()  # Check index duplicated
 
-
+# Group by
+df7 = pd.DataFrame({'Country': ['China', 'Germany',"China", "Germany"],
+                    'Capital': ['Beijing', 'Berlin', 'Shanghai', 'Munich'],
+                    'Population': [3000000, 1500500, 12344546, 2324344]})
+df7.groupby(by=['Country']).max()
+df7.groupby(by=['Country']).sum()
