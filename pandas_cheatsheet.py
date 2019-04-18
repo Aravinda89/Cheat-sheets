@@ -65,3 +65,9 @@ df7 = pd.DataFrame({'Country': ['China', 'Germany',"China", "Germany"],
                     'Population': [3000000, 1500500, 12344546, 2324344]})
 df7.groupby(by=['Country']).max()
 df7.groupby(by=['Country']).sum()
+df7.groupby(by=['Country']).transform(lambda x: x/2)
+
+# Replace
+df6.replace(1, 2)
+df7.replace("A","Z")
+
