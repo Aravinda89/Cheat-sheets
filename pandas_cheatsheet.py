@@ -69,5 +69,14 @@ df7.groupby(by=['Country']).transform(lambda x: x/2)
 
 # Replace
 df6.replace(1, 2)
-df7.replace("A","Z")
+df7.replace("A", "Z")
+
+# Merge
+data1 = pd.DataFrame({"X1": ["a", "b", "c"], "X2": [11.452, 1.303, 99.906]})
+data2 = pd.DataFrame({"X1": ["a", "b", "d"], "X2": [20.784, 0, 20.784]})
+
+pd.merge(data1, data2, how='left', on="X1")
+pd.merge(data1, data2, how='right', on="X1")
+pd.merge(data1, data2, how='inner', on="X1")
+pd.merge(data1, data2, how='outer', on="X1")
 
